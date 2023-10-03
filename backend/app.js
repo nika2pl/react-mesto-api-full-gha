@@ -3,11 +3,9 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 
 require('dotenv').config();
-const { URL_MONGO } = require('./utils/config');
+const { URL_MONGO, PORT } = require('./utils/config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const router = require('./routes');
-
-console.log(process.env.JWT_SECRET);
 
 const app = express();
 
@@ -23,4 +21,4 @@ app.use(errorLogger);
 
 app.use(router);
 
-app.listen(3003);
+app.listen(PORT);
