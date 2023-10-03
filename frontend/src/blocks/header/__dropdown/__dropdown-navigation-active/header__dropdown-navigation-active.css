@@ -1,0 +1,19 @@
+.header__dropdown-navigation-active {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    display: block;
+    background-image: url(../../../../images/icon-dropdown-close.svg);
+}
+
+.header__dropdown-navigation-active:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 500px) {
+    .header__dropdown-navigation-active {
+        display: hide;
+    }
+}

@@ -1,0 +1,11 @@
+.header__dropdown-container {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .header__dropdown-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}

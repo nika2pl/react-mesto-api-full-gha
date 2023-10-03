@@ -1,0 +1,7 @@
+.gallery__wrapper {
+  margin: 25px 15px 31px 21px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}

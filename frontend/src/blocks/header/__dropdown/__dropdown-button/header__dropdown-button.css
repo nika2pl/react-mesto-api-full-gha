@@ -1,0 +1,20 @@
+.header__dropdown-button {
+  height: 22px;
+  cursor: pointer;
+  border: none;
+  display: hide;
+  font-size: 18px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0);
+  color: #a9a9a9;
+}
+
+.header__dropdown-button:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 500px) {
+  .header__dropdown-button {
+    display: block;
+  }
+}

@@ -1,0 +1,13 @@
+.gallery__card {
+  background-color: #fff;
+  border-radius: 10px;
+  grid-template-rows: 282px 1fr;
+  max-width: 100%;
+  display: grid;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__card:hover {
+  cursor: pointer;
+}

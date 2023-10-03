@@ -1,0 +1,16 @@
+.header__dropdown-text {
+  margin: 0;
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  .header__dropdown-text {
+    display: block;
+  }
+}

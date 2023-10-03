@@ -1,0 +1,12 @@
+.header__navigation-button {
+  font-size: 18px;
+  color: #a9a9a9;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  margin: 0 auto;
+  border: 0px;
+}
+
+.header__navigation-button:hover {
+  opacity: 0.6;
+}

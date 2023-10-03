@@ -1,0 +1,6 @@
+.gallery__like-area {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 22px;
+}

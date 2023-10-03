@@ -1,0 +1,16 @@
+.header__navigation-sign-text {
+    text-decoration: none;
+    color: #fff;
+    margin: auto 27px auto 0px;
+}
+
+
+@media (max-width: 500px) {
+    .header__navigation-sign-text {
+        font-size: 14px;
+    }
+}
+
+.header__navigation-sign-text:hover {
+    opacity: 0.8;
+}
