@@ -23,15 +23,14 @@ import successPic from "../images/auth-success.svg";
 import errorPic from "../images/auth-error.svg";
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-70',
+  baseUrl: 'https://api.spacex.nomoredomainsrocks.ru',
   headers: {
-    authorization: 'abd16267-99d7-4c32-91d5-36491ad6a75d',
     'Content-Type': 'application/json'
   }
 });
 
 const apiAuth = new ApiAuth({
-  baseUrl: 'https://auth.nomoreparties.co',
+  baseUrl: 'https://api.spacex.nomoredomainsrocks.ru',
   headers: {
     'Content-Type': 'application/json'
   }
