@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.81.182
+IP 158.160.81.182
 
 Frontend https://spacex.nomoredomainsrocks.ru/
 
