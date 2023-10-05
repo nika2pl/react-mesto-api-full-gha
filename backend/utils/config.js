@@ -1,6 +1,6 @@
 const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
 const URL_MONGO = 'mongodb://127.0.0.1:27017/mestodb';
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 const { SECRET_KEY = 'some-secret-key' } = process.env;
 
 module.exports.URL_REGEX = URL_REGEX;
