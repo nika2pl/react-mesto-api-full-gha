@@ -3,13 +3,15 @@ const Unauthorized = require('../utils/errors/Unauthorized');
 const { SECRET_KEY } = require('../utils/config');
 
 module.exports = (req, res, next) => {
-  const token = req.cookies.jwt;
+  const { authorization } = req.headers;
+  const bearer = 'Bearer ';
 
-  if (!token) {
+  if (!authorization || !authorization.startsWith(bearer)) {
     return next(new Unauthorized('Необходима авторизация'));
   }
 
   let payload;
+  const token = authorization.replace(bearer, '');
 
   try {
     payload = jwt.verify(token, SECRET_KEY);

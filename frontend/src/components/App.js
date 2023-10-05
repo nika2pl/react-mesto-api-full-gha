@@ -32,7 +32,7 @@ const api = new Api({
 const apiAuth = new ApiAuth({
   baseUrl: 'https://api.spacex.nomoredomainsrocks.ru',
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   }
 });
 

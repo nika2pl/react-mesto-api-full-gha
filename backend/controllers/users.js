@@ -28,8 +28,9 @@ module.exports.signin = (req, res, next) => {
 
           // отправим токен, браузер сохранит его в куках
           res.cookie('jwt', token, {
-            maxAge: 3600000,
+            maxAge: 3600000 * 24 * 7,
             httpOnly: true,
+            sameSite: true,
           }).send({ token });
         }
       });
