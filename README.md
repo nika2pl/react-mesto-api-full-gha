@@ -9,8 +9,16 @@
 
 ## Ссылки на проект
 
+<<<<<<< HEAD
 IP 158.160.81.182
 
 Frontend https://spacex.nomoredomainsrocks.ru/
 
 Backend https://api.spacex.nomoredomainsrocks.ru/
+=======
+IP-адрес x.x.x.x
+
+Frontend https://...
+
+Backend https://...
+>>>>>>> bb25d9c8d5c270c243bab1194980a1eb8d5782f5
