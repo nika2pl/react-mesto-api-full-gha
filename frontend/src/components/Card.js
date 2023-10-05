@@ -3,7 +3,8 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Card({key, card, onCardClick, onCardLike, onDeleteCard}) {
   const currentUser = React.useContext(CurrentUserContext);
-  const isOwn = card.owner._id === currentUser._id;
+  
+  const isOwn = card.owner === currentUser._id;
 
   function handleClick() {
     onCardClick(card);

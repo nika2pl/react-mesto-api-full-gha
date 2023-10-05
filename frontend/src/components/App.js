@@ -161,7 +161,6 @@ function App() {
     apiAuth.signIn({ email, password })
       .then((res) => {
         if (res.token) {
-          console.log(res, email);
           setUserEmail(email);
           localStorage.setItem('jwt', res.token);
           setIsLoggedIn(true);
@@ -194,7 +193,7 @@ function App() {
     if (jwt) {
       apiAuth.checkToken(jwt).then((res) => {
         if (res) {
-          setUserEmail(res.data.email);
+          setUserEmail(res.email);
           setIsLoggedIn(true);
 
           navigate('/', { replace: true });
