@@ -7,7 +7,7 @@ const {
   OK_STATUS,
   OK_CREATED,
 } = require('../utils/http_codes');
-const { JWT_SECRET } = require('../utils/config');
+const { SECRET_KEY } = require('../utils/config');
 
 const NotFound = require('../utils/errors/NotFound');
 const BadRequest = require('../utils/errors/BadRequest');
@@ -24,7 +24,7 @@ module.exports.signin = (req, res, next) => {
         if (!result) {
           next(new Unauthorized('Неправильный email или пароль'));
         } else {
-          const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+          const token = jwt.sign({ _id: user._id }, SECRET_KEY, { expiresIn: '7d' });
 
           // отправим токен, браузер сохранит его в куках
           res.cookie('jwt', token, {
