@@ -16,6 +16,7 @@ export default class ApiAuth {
       return fetch(this._url + `/signin`, {
         method: 'POST',
         headers: this._headers,
+        credentials: "include",
         body: JSON.stringify(data)
       }).then(this._checkResponse)
     }
@@ -24,6 +25,7 @@ export default class ApiAuth {
       return fetch(this._url + `/signup`, {
         method: 'POST',
         headers: this._headers,
+        credentials: "include",
         body: JSON.stringify(data)
       }).then(this._checkResponse)
     }
@@ -31,6 +33,7 @@ export default class ApiAuth {
     checkToken(token) {
       return fetch(this._url + `/users/me`, {
         method: 'GET',
+        credentials: "include",
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,

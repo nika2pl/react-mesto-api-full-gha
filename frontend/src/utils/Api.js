@@ -15,6 +15,7 @@ export default class Api {
   getUserInfo() {
     return fetch(this._url + '/users/me', {
       method: 'GET',
+      credentials: "include",
       headers: this._headers
     }).then(this._checkResponse)
   }
@@ -22,6 +23,7 @@ export default class Api {
   getInitialCards() {
     return fetch(this._url + '/cards', {
       method: 'GET',
+      credentials: "include",
       headers: this._headers
     }).then(this._checkResponse)
   }
@@ -29,6 +31,7 @@ export default class Api {
   setUserInfo(data) {
     return fetch(this._url + '/users/me', {
       method: 'PATCH',
+      credentials: "include",
       headers: this._headers,
       body: JSON.stringify(data)
     }).then(this._checkResponse)
@@ -37,6 +40,7 @@ export default class Api {
   addCard(data) {
     return fetch(this._url + '/cards', {
       method: 'POST',
+      credentials: "include",
       headers: this._headers,
       body: JSON.stringify(data)
     }).then(this._checkResponse)
@@ -45,6 +49,7 @@ export default class Api {
   deleteCard(id) {
     return fetch(this._url + `/cards/${id}`, {
       method: 'DELETE',
+      credentials: "include",
       headers: this._headers
     }).then(this._checkResponse)
   }
@@ -60,6 +65,7 @@ export default class Api {
   like(id) {
     return fetch(this._url + `/cards/likes/${id}`, {
       method: 'PUT',
+      credentials: "include",
       headers: this._headers
     }).then(this._checkResponse)
   }
@@ -67,6 +73,7 @@ export default class Api {
   dislike(id) {
     return fetch(this._url + `/cards/likes/${id}`, {
       method: 'DELETE',
+      credentials: "include",
       headers: this._headers
     }).then(this._checkResponse)
   }
@@ -74,6 +81,7 @@ export default class Api {
   changeAvatar(data) {
     return fetch(this._url + `/users/me/avatar`, {
       method: 'PATCH',
+      credentials: "include",
       headers: this._headers,
       body: JSON.stringify(data)
     }).then(this._checkResponse)
