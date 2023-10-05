@@ -16,6 +16,7 @@ router.get('/crash-test', () => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
+
 // не требует авторизации
 router.use('/signup', routeSignup);
 router.use('/signin', routeSignin);
