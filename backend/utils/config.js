@@ -4,6 +4,6 @@ const { PORT = 3000 } = process.env;
 const { SECRET_KEY = 'some-secret-key' } = process.env;
 
 module.exports.URL_REGEX = URL_REGEX;
-module.exports.SECRET_KEY = SECRET_KEY;
+module.exports.SECRET_KEY = 'some-secret-key';
 module.exports.URL_MONGO = URL_MONGO;
 module.exports.PORT = PORT;
