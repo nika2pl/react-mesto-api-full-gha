@@ -9,12 +9,6 @@ const routeSignin = require('./auth/signin');
 const NotFound = require('../utils/errors/NotFound');
 const { ERROR_INTERNAL_SERVER } = require('../utils/http_codes');
 
-router.use('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 // не требует авторизации
 router.use('/signup', routeSignup);
 router.use('/signin', routeSignin);
