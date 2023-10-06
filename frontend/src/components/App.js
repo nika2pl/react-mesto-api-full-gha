@@ -23,14 +23,14 @@ import successPic from "../images/auth-success.svg";
 import errorPic from "../images/auth-error.svg";
 
 const api = new Api({
-  baseUrl: 'https://api.spacex.nomoredomainsrocks.ru',
+  baseUrl: 'http://localhost:3030', 
   headers: {
     'Content-Type': 'application/json'
   }
 });
 
 const apiAuth = new ApiAuth({
-  baseUrl: 'https://api.spacex.nomoredomainsrocks.ru',
+  baseUrl: 'http://localhost:3030',
   headers: {
     'Content-Type': 'application/json',
   }
@@ -104,7 +104,8 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+
+    const isLiked = card.likes.some(i => i === currentUser._id);
 
     api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
       setCards((state) =>

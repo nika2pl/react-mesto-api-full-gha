@@ -63,7 +63,7 @@ export default class Api {
   }
 
   like(id) {
-    return fetch(this._url + `/cards/likes/${id}`, {
+    return fetch(this._url + `/cards/${id}/likes`, {
       method: 'PUT',
       credentials: "include",
       headers: this._headers
@@ -71,7 +71,7 @@ export default class Api {
   }
 
   dislike(id) {
-    return fetch(this._url + `/cards/likes/${id}`, {
+    return fetch(this._url + `/cards/${id}/likes`, {
       method: 'DELETE',
       credentials: "include",
       headers: this._headers
