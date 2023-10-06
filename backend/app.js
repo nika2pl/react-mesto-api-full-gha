@@ -12,8 +12,6 @@ const NotFound = require('./utils/errors/NotFound');
 const { ERROR_INTERNAL_SERVER } = require('./utils/http_codes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-router.use(requestLogger);
-
 const app = express();
 
 mongoose.connect(URL_MONGO, {
@@ -34,6 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors);
+app.use(requestLogger);
 
 app.use(router);
 
